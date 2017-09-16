@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		D3F652A91F6DB15300287A04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F652A81F6DB15300287A04 /* main.m */; };
+		D3F652B61F6DB1B800287A04 /* fld8.c in Sources */ = {isa = PBXBuildFile; fileRef = D3F652B01F6DB1B700287A04 /* fld8.c */; };
+		D3F652B71F6DB1B800287A04 /* INP12.c in Sources */ = {isa = PBXBuildFile; fileRef = D3F652B11F6DB1B700287A04 /* INP12.c */; };
+		D3F652B81F6DB1B800287A04 /* OUTMET.c in Sources */ = {isa = PBXBuildFile; fileRef = D3F652B21F6DB1B800287A04 /* OUTMET.c */; };
+		D3F652B91F6DB1B800287A04 /* FIELDPRP.c in Sources */ = {isa = PBXBuildFile; fileRef = D3F652B31F6DB1B800287A04 /* FIELDPRP.c */; };
+		D3F652BA1F6DB1B800287A04 /* OUTENG.c in Sources */ = {isa = PBXBuildFile; fileRef = D3F652B51F6DB1B800287A04 /* OUTENG.c */; };
+		D3F652BD1F6DB1D500287A04 /* libf2c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F652BC1F6DB1D500287A04 /* libf2c.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,14 @@
 /* Begin PBXFileReference section */
 		D3F652A51F6DB15300287A04 /* FLD12_CommandLineTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FLD12_CommandLineTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F652A81F6DB15300287A04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D3F652B01F6DB1B700287A04 /* fld8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fld8.c; sourceTree = "<group>"; };
+		D3F652B11F6DB1B700287A04 /* INP12.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = INP12.c; sourceTree = "<group>"; };
+		D3F652B21F6DB1B800287A04 /* OUTMET.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = OUTMET.c; sourceTree = "<group>"; };
+		D3F652B31F6DB1B800287A04 /* FIELDPRP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FIELDPRP.c; sourceTree = "<group>"; };
+		D3F652B41F6DB1B800287A04 /* f2c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = f2c.h; sourceTree = "<group>"; };
+		D3F652B51F6DB1B800287A04 /* OUTENG.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = OUTENG.c; sourceTree = "<group>"; };
+		D3F652BC1F6DB1D500287A04 /* libf2c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libf2c.a; path = ../../../../../usr/local/lib/libf2c.a; sourceTree = "<group>"; };
+		D3F652BE1F6DB34300287A04 /* PCH_Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCH_Logging.h; path = ../../PCH_Logging.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3F652BD1F6DB1D500287A04 /* libf2c.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +58,7 @@
 			children = (
 				D3F652A71F6DB15300287A04 /* FLD12_CommandLineTool */,
 				D3F652A61F6DB15300287A04 /* Products */,
+				D3F652BB1F6DB1D500287A04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +74,23 @@
 			isa = PBXGroup;
 			children = (
 				D3F652A81F6DB15300287A04 /* main.m */,
+				D3F652B41F6DB1B800287A04 /* f2c.h */,
+				D3F652B31F6DB1B800287A04 /* FIELDPRP.c */,
+				D3F652B01F6DB1B700287A04 /* fld8.c */,
+				D3F652B11F6DB1B700287A04 /* INP12.c */,
+				D3F652B51F6DB1B800287A04 /* OUTENG.c */,
+				D3F652B21F6DB1B800287A04 /* OUTMET.c */,
+				D3F652BE1F6DB34300287A04 /* PCH_Logging.h */,
 			);
 			path = FLD12_CommandLineTool;
+			sourceTree = "<group>";
+		};
+		D3F652BB1F6DB1D500287A04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3F652BC1F6DB1D500287A04 /* libf2c.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3F652B71F6DB1B800287A04 /* INP12.c in Sources */,
+				D3F652BA1F6DB1B800287A04 /* OUTENG.c in Sources */,
 				D3F652A91F6DB15300287A04 /* main.m in Sources */,
+				D3F652B91F6DB1B800287A04 /* FIELDPRP.c in Sources */,
+				D3F652B61F6DB1B800287A04 /* fld8.c in Sources */,
+				D3F652B81F6DB1B800287A04 /* OUTMET.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +269,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
